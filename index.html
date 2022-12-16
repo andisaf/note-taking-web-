@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script>
+        const axios = require('axios');
+        const options = {
+            method: 'get',
+            URL: '/note-taking.my.id/public/user/',
+            headers: {'token' : 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsdW1lbi1qd3QiLCJzdWIiOiJ5b3VyZW1haWxAZ21haWwuY29tIiwiaWF0IjoxNjcxMTc2ODYxLCJleHAiOjE2NzExODA0NjF9.CCb5IV3vs8YWcC0Y4zYWM_-S6zB_ciQGMSgS1pPUQMQ'}
+            
+        };
+        axios(options)
+        .then(response => {
+            console.log(response.data);
+        })
+    </script>
+</head>
+<body>
+    <div class="notes" id="app">
+    </div>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
